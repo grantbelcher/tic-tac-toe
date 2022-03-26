@@ -18,6 +18,7 @@ const Game = () => {
   return (
     <div>
       <Board squares={board} onClick={handleClick} />
+      <p>{winner ? 'Winner: ' + winner : 'Next Move: ' + (xIsNext ? 'X' : 'O')}</p>
     </div>
   );
 };
