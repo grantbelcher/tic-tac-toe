@@ -9,10 +9,9 @@ const style = {
   outline: 'none'
 };
 
-const Square = ({ onClick, value, gameOver }) => {
-  console.log(gameOver, 'button');
+const Square = ({ onClick, index, value }) => {
   return (
-    <button style={style} onClick={() => onClick(value)} disabled={gameOver}>
+    <button style={style} onClick={() => onClick(index)}>
       {value}
     </button>
   );
