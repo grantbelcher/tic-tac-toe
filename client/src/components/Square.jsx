@@ -9,10 +9,13 @@ const style = {
   outline: 'none'
 };
 
-const Square = ({ onClick, value }) => (
-  <button style={style} onClick={() => onClick(value)}>
-    {value}
-  </button>
-);
+const Square = ({ onClick, value, gameOver }) => {
+  console.log(gameOver, 'button');
+  return (
+    <button style={style} onClick={() => onClick(value)} disabled={gameOver}>
+      {value}
+    </button>
+  );
+};
 
 export default Square;
